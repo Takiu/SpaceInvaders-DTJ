@@ -5,7 +5,7 @@ import flixel.system.FlxSound;
  * ...
  * @author ...
  */
-class Nave
+class Nave extends FlxSprite
 {
 	enum TipoN{
 		Enemigo;
@@ -18,7 +18,7 @@ class Nave
 	var spr : FlxSprite;
 	var sond : FlxSound; 
 	var disp : Bool;
-	var score : Int;
+	var record : Int;
 	
 	public function new(t,v) 
 	{

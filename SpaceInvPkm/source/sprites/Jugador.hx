@@ -4,11 +4,11 @@ package sprites;
  * ...
  * @author ...
  */
-class Player extends Nave
+class Jugador extends Nave
 {
 
 	var vida: Int;
-	var highscore : int
+	var maxPuntaje : int
 	
 	public function new() 
 	{
