@@ -16,13 +16,27 @@ class Jugador extends Nave
 		spr = new FlxSprite(100, 200);
 		spr.makeGraphic(64, 64, 0xFFFF00);
 		add(spr);
+		spr.x = FlxG.widht / 2;
+		spr.y = FlxG.height;
 	}
 	
 	override public function Mover() 
 	{
+		if (spr.x < 0)
+		{
+			spr.x = 0;
+		}
+		if (spr.x > FlxG.widht)
+		{
+			spr.x = FlxG.widht;
+		}
 		if (FlxG.keys.pressed.Left)
 		{
-			spr.x =
+			spr.x -= 4;
+		}
+		if (FlxG.keys.pressed.Right)
+		{
+			spr.x += 4;
 		}
 	}
 	
