@@ -8,19 +8,11 @@ class Jugador extends Nave
 {
 
 	var vida: Int;
-	var maxPuntaje : int
+	var maxPuntaje : Int;
 	
 	public function new() 
 	{
-		//sarasa
+		
 	}
 	
 }
-
-//ESTO ES PARA PROBAR GITHUB
-
-//JULI GATO
-
-//gg
-
-// PRUEBA DOS
