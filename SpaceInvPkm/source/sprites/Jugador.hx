@@ -16,7 +16,7 @@ class Jugador extends Nave
 	}
 	
 }
-
+z
 //ESTO ES PARA PROBAR GITHUB
 
 //JULI GATO
