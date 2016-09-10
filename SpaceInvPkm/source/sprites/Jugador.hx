@@ -22,7 +22,7 @@ class Jugador extends Nave
 	{
 		if (FlxG.keys.pressed.Left)
 		{
-			spr.
+			spr.x =
 		}
 	}
 	
