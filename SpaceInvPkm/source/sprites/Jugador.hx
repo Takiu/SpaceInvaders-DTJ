@@ -12,7 +12,7 @@ class Jugador extends Nave
 	
 	public function new() 
 	{
-		
+		//sarasa
 	}
 	
 }
@@ -20,3 +20,5 @@ class Jugador extends Nave
 //ESTO ES PARA PROBAR GITHUB
 
 //JULI GATO
+
+//gg
