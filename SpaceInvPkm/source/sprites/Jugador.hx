@@ -8,7 +8,7 @@ class Jugador extends Nave
 {
 
 	var vida: Int;
-	var highscore : Int;
+	var maxPuntaje : int
 	
 	public function new()
 	{

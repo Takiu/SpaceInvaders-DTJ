@@ -9,6 +9,9 @@ import flixel.math.FlxMath;
 
 class PlayState extends FlxState
 {
+	
+	public var limitBic : Bool;
+	
 	override public function create():Void
 	{
 		super.create();
