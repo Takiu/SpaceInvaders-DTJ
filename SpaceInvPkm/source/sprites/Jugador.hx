@@ -3,11 +3,6 @@ package sprites;
 import flixel.system.FlxAssets.FlxGraphicAsset;
 import flixel.FlxG;
 import flixel.FlxSprite;
-import flixel.FlxButton;
-import sprites.bala;
-import sprites.disp;
-import sprites.new;
-import sprites.spr;
 
 class Jugador extends Nave
 {
@@ -44,11 +39,11 @@ class Jugador extends Nave
 		{
 			spr.x = FlxG.width - spr.width;
 		}
-		if (FlxG.keys.pressed.Left)
+		if (FlxG.keys.pressed.LEFT)
 		{
 			spr.x -= 4;
 		}
-		if (FlxG.keys.pressed.Right)
+		if (FlxG.keys.pressed.RIGHT)
 		{
 			spr.x += 4;
 		}
