@@ -1,8 +1,12 @@
 package sprites;
 
+import flixel.system.FlxAssets.FlxGraphicAsset;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxButton;
+import sprites.bala;
+import sprites.disp;
+import sprites.new;
 import sprites.spr;
 
 class Jugador extends Nave
@@ -13,22 +17,32 @@ class Jugador extends Nave
 	
 	public function new()
 	{
-		spr = new FlxSprite(100, 200);
+		bala = new FlxSprite();
+		spr = new FlxSprite();
+		bala.makeGraphic(4, 16, 0xFFFF00);
 		spr.makeGraphic(64, 64, 0xFFFF00);
+		add(bala);
 		add(spr);
-		spr.x = FlxG.widht / 2;
-		spr.y = FlxG.height;
+		spr.x = FlxG.width / 2;
+		spr.y = FlxG.height - spr.height;
 	}
 	
+	override public function Disparar()
+	{
+		if (FlxG.keys.justPressed.X)
+		{
+			
+		}
+	}
 	override public function Mover() 
 	{
 		if (spr.x < 0)
 		{
 			spr.x = 0;
 		}
-		if (spr.x > FlxG.widht)
+		if (spr.x > FlxG.width)
 		{
-			spr.x = FlxG.widht;
+			spr.x = FlxG.width - spr.width;
 		}
 		if (FlxG.keys.pressed.Left)
 		{

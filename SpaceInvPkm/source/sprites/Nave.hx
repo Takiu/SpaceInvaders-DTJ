@@ -16,7 +16,8 @@ class Nave extends FlxSprite
 	var tipo : TipoN;
 	var vel : Int;
 	var spr : FlxSprite;
-	var sond : FlxSound; 
+	var sond : FlxSound;
+	var bala : FlxSprite;
 	var disp : Bool;
 	var record : Int;
 	
