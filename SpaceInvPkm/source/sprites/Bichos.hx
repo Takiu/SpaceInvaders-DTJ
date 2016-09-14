@@ -1,33 +1,26 @@
 package sprites;
 import flixel.FlxSprite;
-import sprites.spr;
+import flixel.system.FlxAssets.FlxGraphicAsset;
 
 
-class Bichos extends Enemigo
+class Bichos extends FlxSprite
 {
 	
 	private var dire :Bool;
-	private var img : FlxSprite;
+	public var img = new FlxSprite();
 	
-	public function new() 
+	public function new(?X:Float=0, ?Y:Float=0, ?SimpleGraphic:FlxGraphicAsset)
 	{
-		spr = 
+		img.makeGraphic(16, 16);
+		super(X, Y, SimpleGraphic);
 	}
 	
-	override public function Mover() {
-		if (dire) {
-			x += 5;
-			//si es igual al fin entonces cambiar dire y bajar y
-		}
-		else {
-			x -= 5;
-			//si es igual al inicio entonces cambiar dire y bajar y
-		}
+	public function Mover() {
+		
 	}
 
 	override public function update(elapsed:Float):Void
 	{
 		super.update(elapsed);
-		Mover();
 	}
 }
