@@ -28,11 +28,11 @@ class Jugador extends FlxSprite
 		}
 		if (FlxG.keys.pressed.LEFT)
 		{
-			x -= 4;
+			x -= 2;
 		}
 		if (FlxG.keys.pressed.RIGHT)
 		{
-			x += 4;
+			x += 2;
 		}
 	}
 	

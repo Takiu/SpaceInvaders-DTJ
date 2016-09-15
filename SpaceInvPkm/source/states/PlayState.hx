@@ -86,14 +86,18 @@ class PlayState extends FlxState
 		{
 			if (FlxG.keys.justPressed.SPACE)
 			{
-				disJ = new Disparo( jug.x, jug.y, 0);
+				disJ = new Disparo( jug.x+5, jug.y, 0);
 				add(disJ);
 				elimDisp = true;
 			}
 		}
-		if (disJ.Rango())
+		if (elimDisp)
 		{
-			disJ.destroy();
+			if (disJ.Rango())
+			{
+				disJ.destroy();
+				elimDisp = false;
+			}
 		}
 		super.update(elapsed);
 	}
