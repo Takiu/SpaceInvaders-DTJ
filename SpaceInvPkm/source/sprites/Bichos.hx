@@ -5,6 +5,7 @@ import flixel.system.FlxAssets.FlxGraphicAsset;
 
 class Bichos extends FlxSprite
 {
+	public var Muerto :Bool; 
 	
 	private var dire :Bool;
 	private var vel : Float;
@@ -13,6 +14,7 @@ class Bichos extends FlxSprite
 		super(X, Y, SimpleGraphic);
 		loadGraphic("assets/sprites/Spearow 16x15.png");
 		vel = 0.1;
+		Muerto = false; 
 	}
 	
 	public function Mover(dire : Bool) {
@@ -26,6 +28,7 @@ class Bichos extends FlxSprite
 	public function Bajar() {
 		y += 4;
 		vel += 0.05;
+		
 	}
 
 }

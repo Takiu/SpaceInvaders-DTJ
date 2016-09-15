@@ -10,7 +10,7 @@ import flixel.FlxG;
  */
 class Disparo extends FlxSprite
 {
-
+	
 	
 	public function new(?X:Float=0, ?Y:Float=0, ?SimpleGraphic:FlxGraphicAsset, tipo:Int) 
 	{
@@ -39,5 +39,26 @@ class Disparo extends FlxSprite
 		{
 			return false;
 		}
+	}
+	
+	//Agregado por Deivid
+	public function ColisionRayo(?Bicho:Bichos): Bool
+	{
+				
+		if ( y <= Bicho.y+15 && x >= Bicho.x && x <= Bicho.x+16 && Bicho.Muerto == false)
+		return true;
+		else 
+		return false; 
+		
+	}
+	
+	public function ColisionCaca(?Pikachu:Jugador): Bool
+	{
+				
+		if ( y+7 >= Pikachu.y && x+3 >= Pikachu.x && x+3 <= Pikachu.x+13)
+		return true;
+		else 
+		return false; 
+		
 	}
 }

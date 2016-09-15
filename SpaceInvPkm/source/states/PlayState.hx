@@ -34,7 +34,7 @@ class PlayState extends FlxState
 			while (Coordx < 126)
 			{				
 				bic = new Bichos(); 
-				bic.x = Coordx;				
+				bic.x = Coordx;
 				bic.y = Coordy;
 				Invasion.push(bic);	
 				add(bic);
@@ -74,8 +74,17 @@ class PlayState extends FlxState
 			add(dis);
 			eneDisp = true;
 		}
-		if (eneDisp)	{
+		if (eneDisp)	
+		{
 			dis.y ++;
+			
+			if (dis.ColisionCaca(jug)) 
+			{
+				eneDisp = false;
+				dis.destroy();
+				jug.destroy(); //Esto es solo para probar
+			}
+			
 			if (dis.y >= 144) {
 				eneDisp = false;
 				dis.destroy();
@@ -86,13 +95,24 @@ class PlayState extends FlxState
 		{
 			if (FlxG.keys.justPressed.SPACE)
 			{
-				disJ = new Disparo( jug.x+5, jug.y, 0);
+				disJ = new Disparo( jug.x + 5, jug.y, 0);
 				add(disJ);
 				elimDisp = true;
 			}
 		}
 		if (elimDisp)
 		{
+			for (i in 0...Invasion.length)
+			{
+				if (disJ.ColisionRayo(Invasion[i]))
+				{
+					disJ.destroy();
+					Invasion[i].destroy();
+					Invasion[i].Muerto = true;
+					elimDisp = false;
+				}
+			}
+					
 			if (disJ.Rango())
 			{
 				disJ.destroy();
