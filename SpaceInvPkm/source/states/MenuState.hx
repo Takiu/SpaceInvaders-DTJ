@@ -13,8 +13,8 @@ class MenuState extends FlxState
 	}
 
 	override public function update(elapsed:Float):Void
-	{
-		FlxG.switchState(new PlayState());
+	{		
 		super.update(elapsed);
+		FlxG.switchState(new PlayState());
 	}
 }

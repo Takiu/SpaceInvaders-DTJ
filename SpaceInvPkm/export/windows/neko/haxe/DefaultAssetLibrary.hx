@@ -58,6 +58,27 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		Font.registerFont (__ASSET__flixel_fonts_nokiafc22_ttf);
 		Font.registerFont (__ASSET__flixel_fonts_monsterrat_ttf);
 		
@@ -66,6 +87,27 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
 		
 		className.set ("flixel/sounds/beep.ogg", __ASSET__flixel_sounds_beep_ogg);
 		type.set ("flixel/sounds/beep.ogg", AssetType.SOUND);
@@ -565,6 +607,27 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
 		
@@ -573,6 +636,48 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#if flash
 		
+		path.set ("assets/sounds/- Game Start.wav", "assets/sounds/- Game Start.wav");
+		type.set ("assets/sounds/- Game Start.wav", AssetType.SOUND);
+		path.set ("assets/sounds/click.wav", "assets/sounds/click.wav");
+		type.set ("assets/sounds/click.wav", AssetType.SOUND);
+		path.set ("assets/sounds/force.wav", "assets/sounds/force.wav");
+		type.set ("assets/sounds/force.wav", AssetType.SOUND);
+		path.set ("assets/sounds/fuite.wav", "assets/sounds/fuite.wav");
+		type.set ("assets/sounds/fuite.wav", AssetType.SOUND);
+		path.set ("assets/sounds/go pokeball.wav", "assets/sounds/go pokeball.wav");
+		type.set ("assets/sounds/go pokeball.wav", AssetType.SOUND);
+		path.set ("assets/sounds/menu.wav", "assets/sounds/menu.wav");
+		type.set ("assets/sounds/menu.wav", AssetType.SOUND);
+		path.set ("assets/sounds/open.wav", "assets/sounds/open.wav");
+		type.set ("assets/sounds/open.wav", AssetType.SOUND);
+		path.set ("assets/sounds/Pokemon BlueRed .wav", "assets/sounds/Pokemon BlueRed .wav");
+		type.set ("assets/sounds/Pokemon BlueRed .wav", AssetType.SOUND);
+		path.set ("assets/sounds/PokemonBattle.wav", "assets/sounds/PokemonBattle.wav");
+		type.set ("assets/sounds/PokemonBattle.wav", AssetType.SOUND);
+		path.set ("assets/sounds/sortie.wav", "assets/sounds/sortie.wav");
+		type.set ("assets/sounds/sortie.wav", AssetType.SOUND);
+		path.set ("assets/sprites/Caca.png", "assets/sprites/Caca.png");
+		type.set ("assets/sprites/Caca.png", AssetType.IMAGE);
+		path.set ("assets/sprites/Colision Rayo.png", "assets/sprites/Colision Rayo.png");
+		type.set ("assets/sprites/Colision Rayo.png", AssetType.IMAGE);
+		path.set ("assets/sprites/Ho HO 16x15 .png", "assets/sprites/Ho HO 16x15 .png");
+		type.set ("assets/sprites/Ho HO 16x15 .png", AssetType.IMAGE);
+		path.set ("assets/sprites/Pikachu 13x15.png", "assets/sprites/Pikachu 13x15.png");
+		type.set ("assets/sprites/Pikachu 13x15.png", AssetType.IMAGE);
+		path.set ("assets/sprites/PokeCenter 16x15.png", "assets/sprites/PokeCenter 16x15.png");
+		type.set ("assets/sprites/PokeCenter 16x15.png", AssetType.IMAGE);
+		path.set ("assets/sprites/PokeCenter 2.png", "assets/sprites/PokeCenter 2.png");
+		type.set ("assets/sprites/PokeCenter 2.png", AssetType.IMAGE);
+		path.set ("assets/sprites/PokeCenter 3.png", "assets/sprites/PokeCenter 3.png");
+		type.set ("assets/sprites/PokeCenter 3.png", AssetType.IMAGE);
+		path.set ("assets/sprites/PokeCenter 4.png", "assets/sprites/PokeCenter 4.png");
+		type.set ("assets/sprites/PokeCenter 4.png", AssetType.IMAGE);
+		path.set ("assets/sprites/PokeCenter 5.png", "assets/sprites/PokeCenter 5.png");
+		type.set ("assets/sprites/PokeCenter 5.png", AssetType.IMAGE);
+		path.set ("assets/sprites/Rayo 5x7.png", "assets/sprites/Rayo 5x7.png");
+		type.set ("assets/sprites/Rayo 5x7.png", AssetType.IMAGE);
+		path.set ("assets/sprites/Spearow 16x15.png", "assets/sprites/Spearow 16x15.png");
+		type.set ("assets/sprites/Spearow 16x15.png", AssetType.IMAGE);
 		className.set ("flixel/sounds/beep.ogg", __ASSET__flixel_sounds_beep_ogg);
 		type.set ("flixel/sounds/beep.ogg", AssetType.SOUND);
 		className.set ("flixel/sounds/flixel.ogg", __ASSET__flixel_sounds_flixel_ogg);
@@ -588,6 +693,69 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#elseif html5
 		
 		var id;
+		id = "assets/sounds/- Game Start.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/click.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/force.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/fuite.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/go pokeball.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/menu.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/open.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/Pokemon BlueRed .wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/PokemonBattle.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/sortie.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "assets/sprites/Caca.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/sprites/Colision Rayo.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/sprites/Ho HO 16x15 .png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/sprites/Pikachu 13x15.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/sprites/PokeCenter 16x15.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/sprites/PokeCenter 2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/sprites/PokeCenter 3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/sprites/PokeCenter 4.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/sprites/PokeCenter 5.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/sprites/Rayo 5x7.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/sprites/Spearow 16x15.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
 		id = "flixel/sounds/beep.ogg";
 		path.set (id, id);
 		
@@ -625,6 +793,27 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
 		
 		className.set ("flixel/sounds/beep.ogg", __ASSET__flixel_sounds_beep_ogg);
 		type.set ("flixel/sounds/beep.ogg", AssetType.SOUND);
@@ -1358,6 +1547,27 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if !display
 #if flash
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_beep_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends null { }
@@ -1366,6 +1576,27 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 #elseif html5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

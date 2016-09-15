@@ -3,11 +3,14 @@ package states;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
+import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.text.FlxText;
 import flixel.ui.FlxButton;
 import flixel.math.FlxMath;
 import sprites.Bichos;
+import sprites.Disparo;
 import sprites.Jugador;
+import Std.random;
 
 class PlayState extends FlxState
 {
@@ -16,35 +19,65 @@ class PlayState extends FlxState
 	private var jug : Jugador;
 	private var bic : Bichos;
 	private var Invasion = new Array<Bichos>();
+	private var dire : Bool;
+	private var dis : Disparo;
 	
 	override public function create():Void
-	{
-		super.create();
-		/*var Coordy = 16;
-		while (Coordy < 145)
-		{
-			
+	{		
+		dire = true;
+		var Coordy = 16;
+		while (Coordy < 80)
+		{			
 			var Coordx = 16;
-			while (Coordx < 16)
-			{
-				
+			while (Coordx < 126)
+			{				
 				bic = new Bichos(); 
 				bic.x = Coordx;				
 				bic.y = Coordy;
 				Invasion.push(bic);	
-				this.add(bic);
-				Coordx += 16;			
-				
-				
+				add(bic);
+				Coordx += 16;
 			}		
-			Coordy += 16;					
-			
-		}*/
+			Coordy += 16;	
+		}
+		super.create();
 	}
-
+	var baja : Bool;
+	var timeD : Int = 0;
+	var eneDisp : Bool;
 	override public function update(elapsed:Float):Void
-	{
-		bic.Mover();
+	{		
+		timeD++;
+		baja = false;
+		for (i in 0...Invasion.length){
+			if (Invasion[i].x >= 160)
+			{
+				dire = false;
+				baja = true;
+			}
+			if (Invasion[i].x <= 0)
+			{
+				dire = true;
+				baja = true;
+			}
+			Invasion[i].Mover(dire);				
+		}
+		if (baja) for (i in 0...Invasion.length) Invasion[i].Bajar();
+		if (timeD == 150){
+			timeD = 0;
+			var rand : Int = random(Invasion.length-1);
+			dis = new Disparo(Invasion[rand].x, Invasion[rand].y);
+			add(dis);
+			eneDisp = true;
+		}
+		if (eneDisp)	{
+			dis.y ++;
+			if (dis.y >= 144) {
+				eneDisp = false;
+				dis.destroy();
+			}
+		}
+		
 		super.update(elapsed);
 	}
 }

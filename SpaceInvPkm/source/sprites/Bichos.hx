@@ -7,20 +7,25 @@ class Bichos extends FlxSprite
 {
 	
 	private var dire :Bool;
-	public var img = new FlxSprite();
-	
+	private var vel : Float;
 	public function new(?X:Float=0, ?Y:Float=0, ?SimpleGraphic:FlxGraphicAsset)
 	{
-		img.makeGraphic(16, 16);
 		super(X, Y, SimpleGraphic);
+		loadGraphic("assets/sprites/Spearow 16x15.png");
+		vel = 0.1;
 	}
 	
-	public function Mover() {
-		
+	public function Mover(dire : Bool) {
+		if (dire){
+			x += vel;
+		}else{
+			x -= vel;
+		}
+	}
+	
+	public function Bajar() {
+		y += 4;
+		vel += 0.05;
 	}
 
-	override public function update(elapsed:Float):Void
-	{
-		super.update(elapsed);
-	}
 }
