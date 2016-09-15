@@ -20,10 +20,12 @@ class PlayState extends FlxState
 	private var bic : Bichos;
 	private var Invasion = new Array<Bichos>();
 	private var dire : Bool;
+	private var elimDisp : Bool;
 	private var dis : Disparo;
+	private var disJ : Disparo;
 	
 	override public function create():Void
-	{		
+	{
 		dire = true;
 		var Coordy = 16;
 		while (Coordy < 80)
@@ -40,6 +42,8 @@ class PlayState extends FlxState
 			}		
 			Coordy += 16;	
 		}
+		jug = new Jugador(FlxG.width/2 - 8,FlxG.height-16);
+		add(jug);
 		super.create();
 	}
 	var baja : Bool;
@@ -66,7 +70,7 @@ class PlayState extends FlxState
 		if (timeD == 150){
 			timeD = 0;
 			var rand : Int = random(Invasion.length-1);
-			dis = new Disparo(Invasion[rand].x, Invasion[rand].y);
+			dis = new Disparo(Invasion[rand].x, Invasion[rand].y, 1);
 			add(dis);
 			eneDisp = true;
 		}
@@ -77,7 +81,20 @@ class PlayState extends FlxState
 				dis.destroy();
 			}
 		}
-		
+		jug.Mover();
+		if (!elimDisp)
+		{
+			if (FlxG.keys.justPressed.SPACE)
+			{
+				disJ = new Disparo( jug.x, jug.y, 0);
+				add(disJ);
+				elimDisp = true;
+			}
+		}
+		if (disJ.Rango())
+		{
+			disJ.destroy();
+		}
 		super.update(elapsed);
 	}
 }

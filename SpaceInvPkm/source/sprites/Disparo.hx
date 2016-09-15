@@ -12,17 +12,32 @@ class Disparo extends FlxSprite
 {
 
 	
-	public function new(?X:Float=0, ?Y:Float=0, ?SimpleGraphic:FlxGraphicAsset) 
+	public function new(?X:Float=0, ?Y:Float=0, ?SimpleGraphic:FlxGraphicAsset, tipo:Int) 
 	{
 		super(X, Y, SimpleGraphic);
-		loadGraphic("assets/sprites/Caca.png");
-		y = y + 16;
-		velocity.y = 50;		
-	}
-	
-	override public function update(elapsed:Float):Void
-	{
+		if (tipo == 1)
+		{
+			velocity.y = 50;
+			loadGraphic("assets/sprites/Caca.png");
+			y = y + 16;	
+		}
+		else if (tipo == 0)
+		{
+			loadGraphic("assets/sprites/Rayo 5x7.png");
+			y = y - 8;
+			velocity.y = - 50;
+		}
 		
-		super.update(elapsed);
+	}
+	public function Rango():Bool
+	{
+		if (y < 0)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 }

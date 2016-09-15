@@ -9,43 +9,31 @@ class Jugador extends FlxSprite
 
 	var vida: Int;
 	var maxPuntaje : Int;
-	public var spr = new FlxSprite();
 	
 	public function new(?X:Float=0, ?Y:Float=0, ?SimpleGraphic:FlxGraphicAsset) 
 	{
-		spr.makeGraphic(16, 16);
-		spr.x = FlxG.width / 2;
-		spr.y = FlxG.height - spr.height;
-		
 		super(X, Y, SimpleGraphic);
-		
+		loadGraphic("assets/sprites/Pikachu 13x15.png");
 		
 	}
-	/*override public function Disparar()
+	public function Mover() 
 	{
-		if (FlxG.keys.justPressed.X)
+		if (x < 0)
 		{
-			
+			x = 0;
 		}
-	}
-	override public function Mover() 
-	{
-		if (spr.x < 0)
+		if (x > FlxG.width)
 		{
-			spr.x = 0;
-		}
-		if (spr.x > FlxG.width)
-		{
-			spr.x = FlxG.width - spr.width;
+			x = FlxG.width - 16;
 		}
 		if (FlxG.keys.pressed.LEFT)
 		{
-			spr.x -= 4;
+			x -= 4;
 		}
 		if (FlxG.keys.pressed.RIGHT)
 		{
-			spr.x += 4;
+			x += 4;
 		}
-	}*/
+	}
 	
 }
