@@ -511,7 +511,11 @@ class ApplicationMain {
 		
 		config = {
 			
+<<<<<<< HEAD
 			build: "437",
+=======
+			build: "439",
+>>>>>>> origin/master
 			company: "HaxeFlixel",
 			file: "SpaceInvPkm",
 			fps: 60,

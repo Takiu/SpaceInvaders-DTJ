@@ -86,26 +86,37 @@ class PlayState extends FlxState
 				dire = true;
 				baja = true;
 			}
-			Invasion[i].Mover(dire);				
+			Invasion[i].Mover(dire);
+			if (Invasion[i].ColisionPikachu(jug) && !Invasion[i].Muerto)
+				{
+					Invasion[i].destroy();
+					Invasion[i].Muerto = true;
+					jug.RestarVida();
+					timeSpr++;
+				}
 		}
 		
 		if (baja) for (i in 0...Invasion.length) 
 			{
 				Invasion[i].Bajar();
-				if (Invasion[i].ColisionPikachu(jug))
+				if (Invasion[i].ColisionPikachu(jug) && !Invasion[i].Muerto)
 				{
 					Invasion[i].destroy();
 					Invasion[i].Muerto = true;
 					jug.RestarVida();
+					timeSpr++;
 				}
 			}
 			
 		if (timeD == 150){
 			timeD = 0;
-			var rand : Int = random(Invasion.length-1);
-			dis = new Disparo(Invasion[rand].x, Invasion[rand].y, 1);
-			add(dis);
-			eneDisp = true;
+			var rand : Int = random(Invasion.length - 1);
+			if (!Invasion[rand].Muerto)
+			{
+				dis = new Disparo(Invasion[rand].x, Invasion[rand].y, 1);
+				add(dis);
+				eneDisp = true;
+			}
 		}
 		if (eneDisp)	
 		{
