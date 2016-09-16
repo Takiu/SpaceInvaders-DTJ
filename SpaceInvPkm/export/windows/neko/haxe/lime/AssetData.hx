@@ -44,6 +44,10 @@ class AssetData {
 			type.set ("assets/sprites/Ho HO 16x15 .png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/sprites/Pikachu 13x15.png", "assets/sprites/Pikachu 13x15.png");
 			type.set ("assets/sprites/Pikachu 13x15.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/sprites/PikachuCam1.png", "assets/sprites/PikachuCam1.png");
+			type.set ("assets/sprites/PikachuCam1.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/sprites/PikachuCam2.png", "assets/sprites/PikachuCam2.png");
+			type.set ("assets/sprites/PikachuCam2.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/sprites/PokeCenter 16x15.png", "assets/sprites/PokeCenter 16x15.png");
 			type.set ("assets/sprites/PokeCenter 16x15.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/sprites/PokeCenter 2.png", "assets/sprites/PokeCenter 2.png");

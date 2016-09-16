@@ -9,11 +9,13 @@ class Jugador extends FlxSprite
 
 	var vida: Int;
 	var maxPuntaje : Int;
+	var record : Int;
 	
 	public function new(?X:Float=0, ?Y:Float=0, ?SimpleGraphic:FlxGraphicAsset) 
 	{
 		super(X, Y, SimpleGraphic);
 		loadGraphic("assets/sprites/Pikachu 13x15.png");
+		vida = 3;
 		
 	}
 	public function Mover() 
@@ -36,8 +38,23 @@ class Jugador extends FlxSprite
 		}
 	}
 	
-	public function Actualizar(){
-		
+	public function Actualizar():String
+	{
+		return "Vida: " + vida + "Record: " + record;
+	}
+	
+	public function RestarVida()
+	{
+		vida--;
+		if (vida == 0){
+			//Perdio
+			//Menu principal
+		}
+	}
+	
+	public function SumRecord(tipo : Int) 
+	{
+		record += (tipo == 1)?1:5;		
 	}
 	
 }

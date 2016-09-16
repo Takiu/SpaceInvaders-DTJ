@@ -5,7 +5,6 @@ import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.text.FlxText;
-import flixel.ui.FlxButton;
 import flixel.math.FlxMath;
 import sprites.Bichos;
 import sprites.Disparo;
