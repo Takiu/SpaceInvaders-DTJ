@@ -10,6 +10,7 @@ import sprites.Bichos;
 import sprites.Disparo;
 import sprites.Jugador;
 import Std.random;
+import sprites.Ovni;
 
 class PlayState extends FlxState
 {
@@ -22,6 +23,7 @@ class PlayState extends FlxState
 	private var elimDisp : Bool;
 	private var dis : Disparo;
 	private var disJ : Disparo;
+	//private var ovni : Ovni;
 	var text : String;
 	
 	override public function create():Void
@@ -122,6 +124,7 @@ class PlayState extends FlxState
 				elimDisp = false;
 			}
 		}
+		//add(ovni);
 		super.update(elapsed);
 	}
 }
