@@ -9,7 +9,6 @@ class Jugador extends FlxSprite
 {
 
 	var vida: Int;
-	var maxPuntaje : Int;
 	var record : Int = 1;
 	
 	public function new(?X:Float=0, ?Y:Float=0, ?SimpleGraphic:FlxGraphicAsset) 
