@@ -45,7 +45,7 @@ class Disparo extends FlxSprite
 	public function ColisionRayo(?Bicho:Bichos): Bool
 	{
 				
-		if ( y <= Bicho.y+15 && x >= Bicho.x && x <= Bicho.x+16 && Bicho.Muerto == false)
+		if ( (y <= Bicho.y+15 && y >= Bicho.y) && x >= Bicho.x && x <= Bicho.x+16 && Bicho.Muerto == false)
 		return true;
 		else 
 		return false; 
