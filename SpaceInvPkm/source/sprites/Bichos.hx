@@ -8,13 +8,13 @@ class Bichos extends FlxSprite
 	public var Muerto :Bool; 
 	
 	private var dire :Bool;
-	private var vel : Float;	
+	private var vel : Float;
 	public function new(tipo : Int, ?X:Float=0, ?Y:Float=0, ?SimpleGraphic:FlxGraphicAsset)
 	{
 		super(X, Y, SimpleGraphic);
 		if (tipo == 1){
 			loadGraphic("assets/sprites/Spearow 16x15.png");
-			vel = 0.1;	
+			vel = 0.05;	
 		}else{
 			loadGraphic("assets/sprites/Ho-Oh 16x15 .png");
 			vel = 0.3;	
@@ -26,10 +26,10 @@ class Bichos extends FlxSprite
 	
 	public function Mover(dire : Bool) {
 		if (dire){
-			x += vel;
+			x += vel;			
 		}else{
 			x -= vel;
-		}
+		}		
 	}
 	
 	public function Bajar() {
@@ -38,6 +38,14 @@ class Bichos extends FlxSprite
 		
 	}
 	
+	public function AnimSperrow() {		
+		if (Math.round(x) % 2 == 0)
+		{
+			loadGraphic("assets/sprites/Spearow 16x15.png");
+		}else {
+			loadGraphic("assets/sprites/Spearow2.png");
+		}	
+	}
 	
 	public function ColisionPikachu(?Pikachu:Jugador): Bool
 	{

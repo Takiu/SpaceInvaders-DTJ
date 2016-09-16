@@ -64,6 +64,8 @@ class AssetData {
 			type.set ("assets/sprites/Rayo 5x7.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/sprites/Spearow 16x15.png", "assets/sprites/Spearow 16x15.png");
 			type.set ("assets/sprites/Spearow 16x15.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/sprites/Spearow2.png", "assets/sprites/Spearow2.png");
+			type.set ("assets/sprites/Spearow2.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("flixel/sounds/beep.ogg", "flixel/sounds/beep.ogg");
 			type.set ("flixel/sounds/beep.ogg", Reflect.field (AssetType, "sound".toUpperCase ()));
 			path.set ("flixel/sounds/flixel.ogg", "flixel/sounds/flixel.ogg");
