@@ -23,6 +23,7 @@ class PlayState extends FlxState
 	private var elimDisp : Bool;
 	private var dis : Disparo;
 	private var disJ : Disparo;
+	var text : String;
 	
 	override public function create():Void
 	{
@@ -44,6 +45,9 @@ class PlayState extends FlxState
 		}
 		jug = new Jugador(FlxG.width/2 - 8,FlxG.height-16);
 		add(jug);
+		text = "Hello world";
+        var myText = new FlxText(0,0,150,text,6,false);
+        add(myText);
 		super.create();
 	}
 	var baja : Bool;
@@ -54,7 +58,7 @@ class PlayState extends FlxState
 		timeD++;
 		baja = false;
 		for (i in 0...Invasion.length){
-			if (Invasion[i].x >= 160)
+			if (Invasion[i].x + 16 >= 160)
 			{
 				dire = false;
 				baja = true;
@@ -82,7 +86,7 @@ class PlayState extends FlxState
 			{
 				eneDisp = false;
 				dis.destroy();
-				jug.destroy(); //Esto es solo para probar
+				//jug.destroy(); //Esto es solo para probar
 			}
 			
 			if (dis.y >= 144) {

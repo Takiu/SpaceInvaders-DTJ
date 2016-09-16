@@ -22,18 +22,22 @@ class Jugador extends FlxSprite
 		{
 			x = 0;
 		}
-		if (x > FlxG.width)
+		if (x > FlxG.width - 16)
 		{
 			x = FlxG.width - 16;
 		}
 		if (FlxG.keys.pressed.LEFT)
 		{
-			x -= 2;
+			x -= 1;
 		}
 		if (FlxG.keys.pressed.RIGHT)
 		{
-			x += 2;
+			x += 1;
 		}
+	}
+	
+	public function Actualizar(){
+		
 	}
 	
 }
