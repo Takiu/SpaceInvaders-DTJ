@@ -82,7 +82,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
-		
 		Font.registerFont (__ASSET__flixel_fonts_nokiafc22_ttf);
 		Font.registerFont (__ASSET__flixel_fonts_monsterrat_ttf);
 		
@@ -91,7 +90,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
-		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -639,7 +637,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
-		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
 		
@@ -694,10 +691,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/sprites/PokeCenter 5.png", AssetType.IMAGE);
 		path.set ("assets/sprites/Rayo 5x7.png", "assets/sprites/Rayo 5x7.png");
 		type.set ("assets/sprites/Rayo 5x7.png", AssetType.IMAGE);
-		path.set ("assets/sprites/Spearow 16x15.png", "assets/sprites/Spearow 16x15.png");
-		type.set ("assets/sprites/Spearow 16x15.png", AssetType.IMAGE);
-		path.set ("assets/sprites/Spearow2.png", "assets/sprites/Spearow2.png");
-		type.set ("assets/sprites/Spearow2.png", AssetType.IMAGE);
+		path.set ("assets/sprites/Sperrow.png", "assets/sprites/Sperrow.png");
+		type.set ("assets/sprites/Sperrow.png", AssetType.IMAGE);
 		className.set ("flixel/sounds/beep.ogg", __ASSET__flixel_sounds_beep_ogg);
 		type.set ("flixel/sounds/beep.ogg", AssetType.SOUND);
 		className.set ("flixel/sounds/flixel.ogg", __ASSET__flixel_sounds_flixel_ogg);
@@ -782,10 +777,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/sprites/Rayo 5x7.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
-		id = "assets/sprites/Spearow 16x15.png";
-		path.set (id, id);
-		type.set (id, AssetType.IMAGE);
-		id = "assets/sprites/Spearow2.png";
+		id = "assets/sprites/Sperrow.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "flixel/sounds/beep.ogg";
@@ -825,7 +817,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
-		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -1607,7 +1598,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
-
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_beep_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends null { }
@@ -1616,7 +1606,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 #elseif html5
-
 
 
 
