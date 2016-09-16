@@ -41,7 +41,7 @@ class Disparo extends FlxSprite
 		}
 	}
 	
-	//Agregado por Deivid
+
 	public function ColisionRayo(?Bicho:Bichos): Bool
 	{
 				
@@ -54,8 +54,16 @@ class Disparo extends FlxSprite
 	
 	public function ColisionCaca(?Pikachu:Jugador): Bool
 	{
-				
 		if ( y+7 >= Pikachu.y && x+3 >= Pikachu.x && x+3 <= Pikachu.x+13)
+		return true;
+		else 
+		return false; 
+		
+	}
+	
+	public function ColisionCacaPlataforma(?PCenter:Plataforma): Bool
+	{
+		if ( y+7 >= PCenter.y && x+3 >= PCenter.x && x+3 <= PCenter.x+15 && PCenter.destruido == false)
 		return true;
 		else 
 		return false; 

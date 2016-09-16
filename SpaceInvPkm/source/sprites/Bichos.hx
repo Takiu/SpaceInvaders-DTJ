@@ -37,5 +37,15 @@ class Bichos extends FlxSprite
 		vel += 0.05;
 		
 	}
+	
+	
+	public function ColisionPikachu(?Pikachu:Jugador): Bool
+	{
+		if ( y+15 >= Pikachu.y && (x >= Pikachu.x || x+16 >= Pikachu.x )&& x <= Pikachu.x+13 )
+		return true;
+		else 
+		return false; 
+		
+	}
 
 }

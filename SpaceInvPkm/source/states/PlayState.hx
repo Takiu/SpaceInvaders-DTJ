@@ -10,6 +10,7 @@ import sprites.Bichos;
 import sprites.Disparo;
 import sprites.Jugador;
 import Std.random;
+import sprites.Plataforma;
 
 class PlayState extends FlxState
 {
@@ -19,6 +20,8 @@ class PlayState extends FlxState
 	private var bic : Bichos;
 	private var hooh : Bichos;
 	private var Invasion = new Array<Bichos>();
+	private var Test : Plataforma; //Test Deivid
+	private var PokeCenters = new Array<Plataforma>(); // Test Deivid
 	private var dire : Bool;
 	private var elimDisp : Bool;
 	private var dis : Disparo;
@@ -48,6 +51,17 @@ class PlayState extends FlxState
         var myText = new FlxText(0,0,150,text,6,false);
         add(myText);
 		super.create();
+		
+		var Coordx = 20;
+		Coordy = 100;
+		for (i in 0...4) 
+		{
+			Test = new Plataforma(Coordx, Coordy);
+			PokeCenters.push(Test);
+			add (Test);
+			Coordx += 36;
+		}
+		
 	}
 	var baja : Bool;
 	var timeD : Int = 0;
@@ -72,7 +86,18 @@ class PlayState extends FlxState
 			}
 			Invasion[i].Mover(dire);				
 		}
-		if (baja) for (i in 0...Invasion.length) Invasion[i].Bajar();
+		
+		if (baja) for (i in 0...Invasion.length) 
+			{
+				Invasion[i].Bajar();
+				if (Invasion[i].ColisionPikachu(jug))
+				{
+					Invasion[i].destroy();
+					Invasion[i].Muerto = true;
+					jug.RestarVida();
+				}
+			}
+			
 		if (timeD == 150){
 			timeD = 0;
 			var rand : Int = random(Invasion.length-1);
@@ -90,6 +115,16 @@ class PlayState extends FlxState
 				dis.destroy();
 				jug.RestarVida();
 				timeSpr++;
+			}
+			
+			for (i in 0...4)
+			{
+			if (dis.ColisionCacaPlataforma(PokeCenters[i])) 
+			{
+				eneDisp = false;
+				dis.destroy();
+				PokeCenters[i].Destruir();
+			}
 			}
 			
 			if (dis.y >= 144) {
