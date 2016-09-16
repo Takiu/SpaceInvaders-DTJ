@@ -70,10 +70,12 @@ class PlayState extends FlxState
 	var timeSpr : Int = 0;
 	var eneDisp : Bool;
 	var muertos : Int = 0;
+	var timeAnimS : Int = 0;
 	override public function update(elapsed:Float):Void
 	{		
 		timeD++;
 		timeH++;
+		timeAnimS++;
 		baja = false;
 		for (i in 0...Invasion.length){
 			if (Invasion[i].x + 16 >= 160)
@@ -88,13 +90,17 @@ class PlayState extends FlxState
 			}
 			Invasion[i].Mover(dire);
 			if (Invasion[i].ColisionPikachu(jug) && !Invasion[i].Muerto)
-				{
-					Invasion[i].destroy();
-					Invasion[i].Muerto = true;
-					jug.RestarVida();
-					timeSpr++;
-				}
+			{
+				Invasion[i].destroy();
+				Invasion[i].Muerto = true;
+				jug.RestarVida();
+				timeSpr++;
+			}
+			if (!Invasion[i].Muerto && timeAnimS >= 30) {				
+				Invasion[i].AnimSperrow();
+			}
 		}
+		if (timeAnimS >= 30) timeAnimS = 0;
 		
 		if (baja) for (i in 0...Invasion.length) 
 			{
