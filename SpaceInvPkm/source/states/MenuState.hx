@@ -27,7 +27,7 @@ class MenuState extends FlxState
 		pikachu.y = 56;		
 		ReiniciarPikachu();
 		add(pikachu);
-		texto = "Julian Volonterio David Nari     Kasai Takunori";		
+		texto = "Volonterio Julian Nari David     Kasai Takunori";		
 		titulo = new FlxText(40, 0, 90, "Space Pokemons", 8, false);
 		titulo.alignment = "center";
 		titulo.color = 0xffffff00;

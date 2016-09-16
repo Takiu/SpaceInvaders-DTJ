@@ -33,7 +33,7 @@ class Bichos extends FlxSprite
 	}
 	
 	public function Bajar() {
-		y += 4;
+		y += 2;
 		vel += 0.05;
 		
 	}

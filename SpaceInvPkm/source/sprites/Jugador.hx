@@ -54,9 +54,9 @@ class Jugador extends FlxSprite
 		}
 	}
 	
-	public function SumRecord(tipo : Int) 
+	public function SumRecord(punt : Int) 
 	{
-		record += (tipo == 1)?1:5;		
+		record += punt;		
 	}
 	
 	public function Revivir(){
