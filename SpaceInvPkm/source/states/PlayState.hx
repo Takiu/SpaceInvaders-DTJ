@@ -28,6 +28,7 @@ class PlayState extends FlxState
 	private var disJ : Disparo;
 	//private var ovni : Ovni;
 	var text : String;
+	var myText : FlxText;
 	
 	override public function create():Void
 	{
@@ -47,8 +48,8 @@ class PlayState extends FlxState
 		}
 		jug = new Jugador(FlxG.width/2 - 8,FlxG.height-16);
 		add(jug);
-		text = "Hello world";
-        var myText = new FlxText(0,0,150,text,6,false);
+		text = "Vida: 3       Score: 0";
+        myText = new FlxText(0,0,150,text,8,false);
         add(myText);
 		super.create();
 		
@@ -68,6 +69,7 @@ class PlayState extends FlxState
 	var timeH : Int = 0;
 	var timeSpr : Int = 0;
 	var eneDisp : Bool;
+	var muertos : Int = 0;
 	override public function update(elapsed:Float):Void
 	{		
 		timeD++;
@@ -114,6 +116,7 @@ class PlayState extends FlxState
 				eneDisp = false;
 				dis.destroy();
 				jug.RestarVida();
+				CambiarTexto();
 				timeSpr++;
 			}
 			
@@ -152,6 +155,9 @@ class PlayState extends FlxState
 					Invasion[i].destroy();
 					Invasion[i].Muerto = true;
 					elimDisp = false;
+					muertos++;
+					jug.SumRecord(1);
+					CambiarTexto();
 				}
 			}
 					
@@ -179,6 +185,18 @@ class PlayState extends FlxState
 				jug.Revivir();
 			}
 		}
+		if (muertos == Invasion.length){
+			//Verificar puntaje maximo
+			//Gano el juego
+			FlxG.switchState(new MenuState());
+		}
 		super.update(elapsed);
+	}
+	
+	function CambiarTexto():Void{
+		myText.destroy();
+		myText = new FlxText(0,0,150,text,8,false);
+		text = jug.Actualizar();        
+        add(myText);
 	}
 }
