@@ -23,6 +23,7 @@ class PlayState extends FlxState
 	private var elimDisp : Bool;
 	private var dis : Disparo;
 	private var disJ : Disparo;
+	//private var ovni : Ovni;
 	var text : String;
 	
 	override public function create():Void
