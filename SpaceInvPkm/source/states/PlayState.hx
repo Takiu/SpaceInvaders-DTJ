@@ -171,6 +171,17 @@ class PlayState extends FlxState
 					CambiarTexto();
 				}
 			}
+			if (timeH > 400)
+			{
+				if (disJ.ColisionRayo(hooh))
+				{
+					disJ.destroy();
+					hooh.destroy();
+					elimDisp = false;
+					jug.SumRecord(5);
+					CambiarTexto();
+				}
+			}
 					
 			if (disJ.Rango())
 			{
