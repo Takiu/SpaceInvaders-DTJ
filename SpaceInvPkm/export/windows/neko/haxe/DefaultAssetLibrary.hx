@@ -81,6 +81,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
 		Font.registerFont (__ASSET__flixel_fonts_nokiafc22_ttf);
 		Font.registerFont (__ASSET__flixel_fonts_monsterrat_ttf);
 		
@@ -89,6 +90,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -634,6 +636,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
 		
@@ -666,10 +669,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/sprites/Caca.png", AssetType.IMAGE);
 		path.set ("assets/sprites/Colision Rayo.png", "assets/sprites/Colision Rayo.png");
 		type.set ("assets/sprites/Colision Rayo.png", AssetType.IMAGE);
-		path.set ("assets/sprites/Ho HO 16x15 .png", "assets/sprites/Ho HO 16x15 .png");
-		type.set ("assets/sprites/Ho HO 16x15 .png", AssetType.IMAGE);
+		path.set ("assets/sprites/Ho-Oh 16x15 .png", "assets/sprites/Ho-Oh 16x15 .png");
+		type.set ("assets/sprites/Ho-Oh 16x15 .png", AssetType.IMAGE);
 		path.set ("assets/sprites/Pikachu 13x15.png", "assets/sprites/Pikachu 13x15.png");
 		type.set ("assets/sprites/Pikachu 13x15.png", AssetType.IMAGE);
+		path.set ("assets/sprites/pikachu die.png", "assets/sprites/pikachu die.png");
+		type.set ("assets/sprites/pikachu die.png", AssetType.IMAGE);
 		path.set ("assets/sprites/PikachuCam1.png", "assets/sprites/PikachuCam1.png");
 		type.set ("assets/sprites/PikachuCam1.png", AssetType.IMAGE);
 		path.set ("assets/sprites/PikachuCam2.png", "assets/sprites/PikachuCam2.png");
@@ -739,10 +744,13 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/sprites/Colision Rayo.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
-		id = "assets/sprites/Ho HO 16x15 .png";
+		id = "assets/sprites/Ho-Oh 16x15 .png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/sprites/Pikachu 13x15.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/sprites/pikachu die.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/sprites/PikachuCam1.png";
@@ -809,6 +817,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -1588,6 +1597,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_beep_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends null { }
@@ -1596,6 +1606,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 #elseif html5
+
 
 
 

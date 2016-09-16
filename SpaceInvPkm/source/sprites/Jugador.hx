@@ -3,6 +3,7 @@ package sprites;
 import flixel.system.FlxAssets.FlxGraphicAsset;
 import flixel.FlxG;
 import flixel.FlxSprite;
+import states.MenuState;
 
 class Jugador extends FlxSprite
 {
@@ -46,15 +47,20 @@ class Jugador extends FlxSprite
 	public function RestarVida()
 	{
 		vida--;
+		loadGraphic("assets/sprites/pikachu die.png");
 		if (vida == 0){
 			//Perdio
-			//Menu principal
+			FlxG.switchState(new MenuState());
 		}
 	}
 	
 	public function SumRecord(tipo : Int) 
 	{
 		record += (tipo == 1)?1:5;		
+	}
+	
+	public function Revivir(){
+		loadGraphic("assets/sprites/Pikachu 13x15.png");
 	}
 	
 }

@@ -40,10 +40,12 @@ class AssetData {
 			type.set ("assets/sprites/Caca.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/sprites/Colision Rayo.png", "assets/sprites/Colision Rayo.png");
 			type.set ("assets/sprites/Colision Rayo.png", Reflect.field (AssetType, "image".toUpperCase ()));
-			path.set ("assets/sprites/Ho HO 16x15 .png", "assets/sprites/Ho HO 16x15 .png");
-			type.set ("assets/sprites/Ho HO 16x15 .png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/sprites/Ho-Oh 16x15 .png", "assets/sprites/Ho-Oh 16x15 .png");
+			type.set ("assets/sprites/Ho-Oh 16x15 .png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/sprites/Pikachu 13x15.png", "assets/sprites/Pikachu 13x15.png");
 			type.set ("assets/sprites/Pikachu 13x15.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/sprites/pikachu die.png", "assets/sprites/pikachu die.png");
+			type.set ("assets/sprites/pikachu die.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/sprites/PikachuCam1.png", "assets/sprites/PikachuCam1.png");
 			type.set ("assets/sprites/PikachuCam1.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/sprites/PikachuCam2.png", "assets/sprites/PikachuCam2.png");

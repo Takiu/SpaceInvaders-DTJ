@@ -8,12 +8,19 @@ class Bichos extends FlxSprite
 	public var Muerto :Bool; 
 	
 	private var dire :Bool;
-	private var vel : Float;
-	public function new(?X:Float=0, ?Y:Float=0, ?SimpleGraphic:FlxGraphicAsset)
+	private var vel : Float;	
+	public function new(tipo : Int, ?X:Float=0, ?Y:Float=0, ?SimpleGraphic:FlxGraphicAsset)
 	{
 		super(X, Y, SimpleGraphic);
-		loadGraphic("assets/sprites/Spearow 16x15.png");
-		vel = 0.1;
+		if (tipo == 1){
+			loadGraphic("assets/sprites/Spearow 16x15.png");
+			vel = 0.1;	
+		}else{
+			loadGraphic("assets/sprites/Ho-Oh 16x15 .png");
+			vel = 0.3;	
+		}
+		
+		
 		Muerto = false; 
 	}
 	

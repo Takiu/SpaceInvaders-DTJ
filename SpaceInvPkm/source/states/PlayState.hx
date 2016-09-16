@@ -17,6 +17,7 @@ class PlayState extends FlxState
 	public var limitBic : Bool;
 	private var jug : Jugador;
 	private var bic : Bichos;
+	private var hooh : Bichos;
 	private var Invasion = new Array<Bichos>();
 	private var dire : Bool;
 	private var elimDisp : Bool;
@@ -33,9 +34,7 @@ class PlayState extends FlxState
 			var Coordx = 16;
 			while (Coordx < 126)
 			{				
-				bic = new Bichos(); 
-				bic.x = Coordx;
-				bic.y = Coordy;
+				bic = new Bichos(1,Coordx,Coordy); 
 				Invasion.push(bic);	
 				add(bic);
 				Coordx += 16;
@@ -51,10 +50,13 @@ class PlayState extends FlxState
 	}
 	var baja : Bool;
 	var timeD : Int = 0;
+	var timeH : Int = 0;
+	var timeSpr : Int = 0;
 	var eneDisp : Bool;
 	override public function update(elapsed:Float):Void
 	{		
 		timeD++;
+		timeH++;
 		baja = false;
 		for (i in 0...Invasion.length){
 			if (Invasion[i].x + 16 >= 160)
@@ -85,7 +87,8 @@ class PlayState extends FlxState
 			{
 				eneDisp = false;
 				dis.destroy();
-				//jug.destroy(); //Esto es solo para probar
+				jug.RestarVida();
+				timeSpr++;
 			}
 			
 			if (dis.y >= 144) {
@@ -120,6 +123,24 @@ class PlayState extends FlxState
 			{
 				disJ.destroy();
 				elimDisp = false;
+			}
+		}
+		if (timeH == 400){
+			hooh = new Bichos(2,0,8);
+			add(hooh);			
+		}
+		if (timeH > 400){
+			hooh.Mover(true);
+			if (hooh.x > FlxG.width - 16){
+				hooh.destroy();
+				timeH = 0;
+			}
+		}
+		if (timeSpr != 0){
+			timeSpr++;
+			if (timeSpr == 30){
+				timeSpr = 0;
+				jug.Revivir();
 			}
 		}
 		super.update(elapsed);
