@@ -13,7 +13,9 @@ class Bichos extends FlxSprite
 	{
 		super(X, Y, SimpleGraphic);
 		if (tipo == 1){
-			loadGraphic("assets/sprites/Spearow 16x15.png");
+			loadGraphic("assets/sprites/Sperrow.png", true, 16, 15);
+			animation.add("sperrow", [0, 1], 2, true);
+			animation.play("sperrow");
 			vel = 0.05;	
 		}else{
 			loadGraphic("assets/sprites/Ho-Oh 16x15 .png");
@@ -36,15 +38,6 @@ class Bichos extends FlxSprite
 		y += 2;
 		vel += 0.05;
 		
-	}
-	
-	public function AnimSperrow() {		
-		if (Math.round(x) % 2 == 0)
-		{
-			loadGraphic("assets/sprites/Spearow 16x15.png");
-		}else {
-			loadGraphic("assets/sprites/Spearow2.png");
-		}	
 	}
 	
 	public function ColisionPikachu(?Pikachu:Jugador): Bool

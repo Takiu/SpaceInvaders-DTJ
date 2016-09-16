@@ -96,9 +96,6 @@ class PlayState extends FlxState
 				jug.RestarVida();
 				timeSpr++;
 			}
-			if (!Invasion[i].Muerto && timeAnimS >= 30) {				
-				Invasion[i].AnimSperrow();
-			}
 		}
 		if (timeAnimS >= 30) timeAnimS = 0;
 		
