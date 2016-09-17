@@ -162,6 +162,16 @@ class PlayState extends FlxState
 		}
 		if (elimDisp)
 		{
+			for (i in 0...4)
+			{
+			if (disJ.ColisionRayoPlataforma(PokeCenters[i])) 
+			{
+				disJ.destroy();
+				PokeCenters[i].Destruir();
+				elimDisp = false;
+			}
+}
+						
 			for (i in 0...Invasion.length)
 			{
 				if (disJ.ColisionRayo(Invasion[i]))

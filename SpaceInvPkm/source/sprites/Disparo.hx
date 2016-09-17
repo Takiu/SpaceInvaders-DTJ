@@ -69,4 +69,13 @@ class Disparo extends FlxSprite
 		return false; 
 		
 	}
+	
+	public function ColisionRayoPlataforma(?PCenter:Plataforma): Bool
+	{
+		if ( (y >= PCenter.y && y <= PCenter.y+16) && x+3 >= PCenter.x && x+3 <= PCenter.x+15 && PCenter.destruido == false)
+		return true;
+		else 
+		return false; 
+		
+	}
 }
