@@ -221,6 +221,16 @@ class PlayState extends FlxState
 				jug.Revivir();
 			}
 		}
+		
+		if (timeSpr != 0){
+			timeSpr++;
+			if (timeSpr == 30){
+				timeSpr = 0;
+				disJ.destroy();
+			}
+		}
+		
+		
 		if (muertos == Invasion.length){			
 			//Gano el juego
 			jug.VerRecord();
