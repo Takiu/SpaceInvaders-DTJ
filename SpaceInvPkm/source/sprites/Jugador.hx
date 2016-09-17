@@ -4,12 +4,13 @@ import flixel.system.FlxAssets.FlxGraphicAsset;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import states.MenuState;
+import Reg;
 
 class Jugador extends FlxSprite
 {
 
 	var vida: Int;
-	var record : Int = 1;
+	public var record : Int = 1;
 	
 	public function new(?X:Float=0, ?Y:Float=0, ?SimpleGraphic:FlxGraphicAsset) 
 	{
@@ -40,7 +41,7 @@ class Jugador extends FlxSprite
 	
 	public function Actualizar():String
 	{
-		return "Vida: "+ vida +"     Score: "+ record;
+		return "Vida: "+ vida +"  Record: "+ record + "  MaxR: " +Reg.MaxPuntaje;
 	}
 	
 	public function RestarVida()
@@ -49,6 +50,7 @@ class Jugador extends FlxSprite
 		loadGraphic("assets/sprites/pikachu die.png");
 		if (vida == 0){
 			//Perdio
+			VerRecord();
 			FlxG.switchState(new MenuState());
 		}
 	}
@@ -60,6 +62,10 @@ class Jugador extends FlxSprite
 	
 	public function Revivir(){
 		loadGraphic("assets/sprites/Pikachu 13x15.png");
+	}
+	
+	public function VerRecord() {
+		Reg.MaxPuntaje = (record > Reg.MaxPuntaje)?record:Reg.MaxPuntaje;
 	}
 	
 }

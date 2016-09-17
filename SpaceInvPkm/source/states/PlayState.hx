@@ -11,6 +11,7 @@ import sprites.Disparo;
 import sprites.Jugador;
 import Std.random;
 import sprites.Plataforma;
+import Reg;
 
 class PlayState extends FlxState
 {
@@ -48,7 +49,7 @@ class PlayState extends FlxState
 		}
 		jug = new Jugador(FlxG.width/2 - 8,FlxG.height-16);
 		add(jug);
-		text = "Vida: 3       Score: 0";
+		text = "Vida: 3  Record: 0  MaxR: " + Reg.MaxPuntaje;
         myText = new FlxText(0,0,150,text,8,false);
         add(myText);
 		super.create();
@@ -210,9 +211,9 @@ class PlayState extends FlxState
 				jug.Revivir();
 			}
 		}
-		if (muertos == Invasion.length){
-			//Verificar puntaje maximo
+		if (muertos == Invasion.length){			
 			//Gano el juego
+			jug.VerRecord();
 			FlxG.switchState(new MenuState());
 		}
 		super.update(elapsed);

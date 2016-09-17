@@ -6,6 +6,6 @@ package;
  */
 class Reg
 {
-	static public MaxPuntaje: Int;
+	static public var MaxPuntaje: Int = 0;
 		
 }
