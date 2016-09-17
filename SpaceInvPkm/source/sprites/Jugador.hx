@@ -3,7 +3,7 @@ package sprites;
 import flixel.system.FlxAssets.FlxGraphicAsset;
 import flixel.FlxG;
 import flixel.FlxSprite;
-import states.MenuState;
+import states.Reiniciar;
 import Reg;
 
 class Jugador extends FlxSprite
