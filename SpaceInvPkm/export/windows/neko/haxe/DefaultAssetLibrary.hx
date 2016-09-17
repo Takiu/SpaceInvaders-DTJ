@@ -645,14 +645,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#if flash
 		
-		path.set ("assets/sounds/- Game Start.wav", "assets/sounds/- Game Start.wav");
-		type.set ("assets/sounds/- Game Start.wav", AssetType.SOUND);
 		path.set ("assets/sounds/click.wav", "assets/sounds/click.wav");
 		type.set ("assets/sounds/click.wav", AssetType.SOUND);
 		path.set ("assets/sounds/force.wav", "assets/sounds/force.wav");
 		type.set ("assets/sounds/force.wav", AssetType.SOUND);
 		path.set ("assets/sounds/fuite.wav", "assets/sounds/fuite.wav");
 		type.set ("assets/sounds/fuite.wav", AssetType.SOUND);
+		path.set ("assets/sounds/GameStart.wav", "assets/sounds/GameStart.wav");
+		type.set ("assets/sounds/GameStart.wav", AssetType.SOUND);
 		path.set ("assets/sounds/go pokeball.wav", "assets/sounds/go pokeball.wav");
 		type.set ("assets/sounds/go pokeball.wav", AssetType.SOUND);
 		path.set ("assets/sounds/menu.wav", "assets/sounds/menu.wav");
@@ -708,9 +708,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#elseif html5
 		
 		var id;
-		id = "assets/sounds/- Game Start.wav";
-		path.set (id, id);
-		type.set (id, AssetType.SOUND);
 		id = "assets/sounds/click.wav";
 		path.set (id, id);
 		type.set (id, AssetType.SOUND);
@@ -718,6 +715,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		type.set (id, AssetType.SOUND);
 		id = "assets/sounds/fuite.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/GameStart.wav";
 		path.set (id, id);
 		type.set (id, AssetType.SOUND);
 		id = "assets/sounds/go pokeball.wav";

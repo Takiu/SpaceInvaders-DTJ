@@ -16,14 +16,14 @@ class AssetData {
 		
 		if (!initialized) {
 			
-			path.set ("assets/sounds/- Game Start.wav", "assets/sounds/- Game Start.wav");
-			type.set ("assets/sounds/- Game Start.wav", Reflect.field (AssetType, "sound".toUpperCase ()));
 			path.set ("assets/sounds/click.wav", "assets/sounds/click.wav");
 			type.set ("assets/sounds/click.wav", Reflect.field (AssetType, "sound".toUpperCase ()));
 			path.set ("assets/sounds/force.wav", "assets/sounds/force.wav");
 			type.set ("assets/sounds/force.wav", Reflect.field (AssetType, "sound".toUpperCase ()));
 			path.set ("assets/sounds/fuite.wav", "assets/sounds/fuite.wav");
 			type.set ("assets/sounds/fuite.wav", Reflect.field (AssetType, "sound".toUpperCase ()));
+			path.set ("assets/sounds/GameStart.wav", "assets/sounds/GameStart.wav");
+			type.set ("assets/sounds/GameStart.wav", Reflect.field (AssetType, "sound".toUpperCase ()));
 			path.set ("assets/sounds/go pokeball.wav", "assets/sounds/go pokeball.wav");
 			type.set ("assets/sounds/go pokeball.wav", Reflect.field (AssetType, "sound".toUpperCase ()));
 			path.set ("assets/sounds/menu.wav", "assets/sounds/menu.wav");
