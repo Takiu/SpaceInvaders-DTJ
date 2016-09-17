@@ -50,6 +50,7 @@ class Jugador extends FlxSprite
 		loadGraphic("assets/sprites/pikachu die.png");
 		if (vida == 0){
 			//Perdio
+			Reg.Fin = false;
 			VerRecord();
 			FlxG.switchState(new MenuState());
 		}
