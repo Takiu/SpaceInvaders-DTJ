@@ -69,6 +69,7 @@ class PlayState extends FlxState
 	var timeD : Int = 0;
 	var timeH : Int = 0;
 	var timeSpr : Int = 0;
+	var timeSprRayo: Int = 0;
 	var eneDisp : Bool;
 	var muertos : Int = 0;
 	var timeAnimS : Int = 0;
@@ -166,7 +167,7 @@ class PlayState extends FlxState
 			{
 			if (disJ.ColisionRayoPlataforma(PokeCenters[i])) 
 			{
-				disJ.destroy();
+				timeSprRayo++;
 				PokeCenters[i].Destruir();
 				elimDisp = false;
 			}
@@ -176,7 +177,7 @@ class PlayState extends FlxState
 			{
 				if (disJ.ColisionRayo(Invasion[i]))
 				{
-					disJ.destroy();
+					timeSprRayo++;
 					Invasion[i].destroy();
 					Invasion[i].Muerto = true;
 					elimDisp = false;
@@ -189,7 +190,7 @@ class PlayState extends FlxState
 			{
 				if (disJ.ColisionRayo(hooh))
 				{
-					disJ.destroy();
+					timeSprRayo++;
 					hooh.destroy();
 					elimDisp = false;
 					jug.SumRecord(5);
@@ -199,7 +200,7 @@ class PlayState extends FlxState
 					
 			if (disJ.Rango())
 			{
-				disJ.destroy();
+				timeSprRayo++;
 				elimDisp = false;
 			}
 		}
@@ -222,10 +223,10 @@ class PlayState extends FlxState
 			}
 		}
 		
-		if (timeSpr != 0){
-			timeSpr++;
-			if (timeSpr == 30){
-				timeSpr = 0;
+		if (timeSprRayo != 0){
+			timeSprRayo++;
+			if (timeSprRayo == 30){
+				timeSprRayo = 0;
 				disJ.destroy();
 			}
 		}
