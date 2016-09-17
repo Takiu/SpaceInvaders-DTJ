@@ -52,7 +52,7 @@ class Jugador extends FlxSprite
 			//Perdio
 			Reg.Fin = false;
 			VerRecord();
-			FlxG.switchState(new MenuState());
+			FlxG.switchState(new Reiniciar());
 		}
 	}
 	
