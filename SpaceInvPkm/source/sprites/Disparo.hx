@@ -46,7 +46,11 @@ class Disparo extends FlxSprite
 	{
 				
 		if ( (y <= Bicho.y+15 && y >= Bicho.y) && x >= Bicho.x && x <= Bicho.x+16 && Bicho.Muerto == false)
-		return true;
+		{	
+			loadGraphic("assets/sprites/Colision Rayo.png");
+			velocity.y = 0;
+			return true;
+		}
 		else 
 		return false; 
 		
@@ -64,7 +68,8 @@ class Disparo extends FlxSprite
 	public function ColisionCacaPlataforma(?PCenter:Plataforma): Bool
 	{
 		if ( y+7 >= PCenter.y && x+3 >= PCenter.x && x+3 <= PCenter.x+15 && PCenter.destruido == false)
-		return true;
+			return true;
+		
 		else 
 		return false; 
 		
@@ -75,6 +80,7 @@ class Disparo extends FlxSprite
 		if ( (y >= PCenter.y && y <= PCenter.y+16) && x+3 >= PCenter.x && x+3 <= PCenter.x+15 && PCenter.destruido == false)
 		{	
 			loadGraphic("assets/sprites/Colision Rayo.png");
+			velocity.y = 0;
 			return true;
 		}
 		else 

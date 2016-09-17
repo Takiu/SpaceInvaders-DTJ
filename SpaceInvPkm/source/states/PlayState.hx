@@ -27,6 +27,7 @@ class PlayState extends FlxState
 	private var elimDisp : Bool;
 	private var dis : Disparo;
 	private var disJ : Disparo;
+	private var DisAct : Bool;
 	//private var ovni : Ovni;
 	var text : String;
 	var myText : FlxText;
@@ -159,28 +160,29 @@ class PlayState extends FlxState
 				disJ = new Disparo( jug.x + 5, jug.y, 0);
 				add(disJ);
 				elimDisp = true;
+				DisAct = true;
 			}
 		}
 		if (elimDisp)
 		{
 			for (i in 0...4)
 			{
-			if (disJ.ColisionRayoPlataforma(PokeCenters[i])) 
+			if (disJ.ColisionRayoPlataforma(PokeCenters[i]) && DisAct) 
 			{
 				timeSprRayo++;
 				PokeCenters[i].Destruir();
-				elimDisp = false;
+				DisAct = false;
 			}
-}
+			}
 						
 			for (i in 0...Invasion.length)
 			{
-				if (disJ.ColisionRayo(Invasion[i]))
+				if (disJ.ColisionRayo(Invasion[i]) && DisAct)
 				{
 					timeSprRayo++;
+					DisAct = false;
 					Invasion[i].destroy();
 					Invasion[i].Muerto = true;
-					elimDisp = false;
 					muertos++;
 					jug.SumRecord(1);
 					CambiarTexto();
@@ -188,11 +190,11 @@ class PlayState extends FlxState
 			}
 			if (timeH > 400)
 			{
-				if (disJ.ColisionRayo(hooh))
+				if (disJ.ColisionRayo(hooh) && DisAct)
 				{
 					timeSprRayo++;
+					DisAct = false;
 					hooh.destroy();
-					elimDisp = false;
 					jug.SumRecord(5);
 					CambiarTexto();
 				}
@@ -201,7 +203,7 @@ class PlayState extends FlxState
 			if (disJ.Rango())
 			{
 				timeSprRayo++;
-				elimDisp = false;
+				DisAct = false;
 			}
 		}
 		if (timeH == 400){
@@ -225,9 +227,10 @@ class PlayState extends FlxState
 		
 		if (timeSprRayo != 0){
 			timeSprRayo++;
-			if (timeSprRayo == 30){
+			if (timeSprRayo == 10){
 				timeSprRayo = 0;
 				disJ.destroy();
+				elimDisp = false;
 			}
 		}
 		
