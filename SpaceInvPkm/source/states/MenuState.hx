@@ -6,7 +6,7 @@ import flixel.FlxState;
 import states.PlayState;
 import flixel.ui.FlxButton;
 import flixel.text.FlxText;
-
+import flixel.system.FlxSound;
 
 class MenuState extends FlxState
 {
@@ -17,10 +17,13 @@ class MenuState extends FlxState
 	var texto : String;
 	var myText : FlxText;
 	var titulo : FlxText;
+	var sonido : FlxSound;
 	
 	override public function create():Void
-	{
+	{		
 		super.create();		
+		sonido = FlxG.sound.load(AssetPaths.GameStart__wav, 1, true);
+		sonido.play();
 		var button:FlxButton = new FlxButton(40,70, "Jugar", OnClickButton);
         add(button);
 		pikachu = new FlxSprite();
