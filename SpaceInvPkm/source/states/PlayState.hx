@@ -237,7 +237,7 @@ class PlayState extends FlxState
 		
 		if (muertos == Invasion.length){			
 			//Gano el juego
-			Reg.Fin = false;
+			Reg.Fin = true;
 			jug.VerRecord();
 			FlxG.switchState(new Reiniciar());
 		}
